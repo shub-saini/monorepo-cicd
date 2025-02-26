@@ -11,7 +11,7 @@
     "push:db": "cd packages/db && bunx prisma db push",
     "start:backend": "cd apps/backend && bun run index.ts",
     "start:ws": "cd apps/ws && bun run index.ts",
-    "start:frontend": "cd apps/frontend && bun start"
+    "start:frontend": "cd apps/web && bun start"
   },
   "devDependencies": {
     "prettier": "^3.5.0",

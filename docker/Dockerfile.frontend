@@ -4,12 +4,12 @@ WORKDIR /usr/src/app
 
 ARG DATABASE_URL
 COPY package.json bun.lockb turbo.json ./
-COPY apps/frontend/package.json apps/frontend/
-COPY packages packages
+COPY apps/web/package.json apps/web/
+COPY packages packagesps
 
 RUN bun install 
 
-COPY apps/frontend ./apps/frontend
+COPY apps/web ./apps/web
 
 RUN bun run generate:db
 RUN DATABASE_URL=${DATABASE_URL} bun run build
